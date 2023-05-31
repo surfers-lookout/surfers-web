@@ -12,6 +12,9 @@ spec:
   params:
   - name: clusterBuilder
     value: full
+  - name: testing_pipeline_matching_labels
+    value:
+      apps.tanzu.vmware.com/language: python
   - name: annotations
     value:
       autoscaling.knative.dev/min-scale: "1"
@@ -24,7 +27,7 @@ spec:
       autoscaling.knative.dev/target: "60"
   source:
     git:
-      url: https://github.com/davlloyd/surfers-web
+      url: https://github.com/surfers-lookout/surfers-web
       ref:
         branch: main
   serviceClaims:
